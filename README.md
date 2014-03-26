@@ -22,9 +22,10 @@ Now you need to run the following to install the package:
 
 	composer update
 
-Next you need to add the following service provider to your `app/config/app.php`:
+Next you need to delete the `'Illuminate\Redis\RedisServiceProvider',` service provider and add the following service providers to your `app/config/app.php`:
 
-    'Awellis13\Resque\ServiceProviders\ResqueServiceProvider'
+    'Awellis13\Resque\ServiceProviders\ResqueServiceProvider',
+    'Awellis13\Resque\ServiceProviders\RedisServiceProvider'
 
 Now you need to add the following to your `/app/config/queue.php` "connections" section:
 
