@@ -52,7 +52,7 @@ class ListenCommand extends Command {
 		$interval = $this->input->getOption('interval');
 
 		// Connect to redis
-		Resque::setBackend(Config::get('database.redis.default.host').':'.Config::get('database.redis.default.port'));
+		Resque::setBackend(Config::get('database.redis.default.host').':'.Config::get('database.redis.default.port'),Config::get('database.redis.default.database'));
 
 		// Launch worker
 		$queues = explode(',', $queue);
