@@ -1,29 +1,38 @@
 {
-	"name": "tufanbarisyildirim/laravel-resque-redis",
-	"version": "1.2.0",
-	"description": "Laravel Resque connector for Queue.",
-	"keywords": ["laravel", "resque", "queue"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Andrew Ellis",
-			"email": "awellis@me.com"
-		}
-	],
-	"require": {
-		"php": ">=5.5.0",
-
-		"illuminate/config": "4.1.x",
-		"illuminate/queue": "4.1.x",
-		"chrisboulton/php-resque": "dev-master"
-	},
-	"suggest": {
-		"chrisboulton/php-resque-scheduler": "Enables the use of the ResqueScheduler functionality."
-	},
-	"autoload": {
-		"psr-0": {
-			"Awellis13\\Resque": "src/"
-		}
-	},
-	"minimum-stability": "dev"
+  "name": "tufanbarisyildirim/laravel-resque-redis",
+  "version": "1.2.0",
+  "description": "Laravel Resque connector for Queue.",
+  "keywords": [
+    "laravel",
+    "resque",
+    "queue"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tufan Baris YILDIRIM",
+      "email": "tufanbarisyildirim@gmail.com"
+    },
+    {
+      "name": "Andrew Ellis",
+      "email": "awellis@me.com",
+      "role": "Author"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "illuminate/config": ">=4.1",
+    "illuminate/queue": ">=4.1",
+    "chrisboulton/php-resque": "dev-master"
+  },
+  "suggest": {
+    "chrisboulton/php-resque-scheduler": "Enables the use of the ResqueScheduler functionality."
+  },
+  "autoload": {
+    "psr-0": {
+      "Awellis13\\Resque": "src/"
+    },
+    "psr-4": {"Awellis13\\Resque\\": "src/Awellis13/Resque/"}
+  },
+  "minimum-stability": "dev"
 }
